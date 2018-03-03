@@ -1,6 +1,8 @@
 package com.zob.shop.order.action;
 
 import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import com.zob.shop.order.service.OrderService;
@@ -81,7 +83,16 @@ public class OrderAction extends ActionSupport implements ModelDriven<Order> {
 		// 设置订单的状态
 		order.setState(1); // 1:未付款.
 		// 设置订单时间
-		order.setOrdertime(new Date());
+		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		String tempOrderTime = format.format(new Date());
+		try {
+			order.setOrdertime(format.parse(tempOrderTime));
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+
+
+		System.out.println("订单时间--------------------"+order.getOrdertime());
 		// 设置订单关联的客户:
 		User existUser = (User) ServletActionContext.getRequest().getSession()
 				.getAttribute("existUser");

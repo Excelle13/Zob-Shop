@@ -12,6 +12,7 @@ import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
 
 /**
+ *
  * 后台订单管理的Action
  * @author zob
  *
@@ -23,6 +24,7 @@ public class AdminOrderAction extends ActionSupport implements ModelDriven<Order
 	public Order getModel() {
 		return order;
 	}
+
 	// 接收page参数
 	private Integer page;
 	
@@ -60,6 +62,7 @@ public class AdminOrderAction extends ActionSupport implements ModelDriven<Order
 	
 	// 根据订单的id查询订单项:
 	public String findOrderItem(){
+
 		// 根据订单id查询订单项:
 		List<OrderItem> list = orderService.findOrderItem(order.getOid());
 		// 显示到页面:

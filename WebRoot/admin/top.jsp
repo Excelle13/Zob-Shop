@@ -28,7 +28,7 @@
     </style>
     <link href="${pageContext.request.contextPath}/css/Style1.css" rel="stylesheet" type="text/css">
 </HEAD>
-<body>
+<body class="layui-layout-body">
 <%--
 <table width="100%" height="70%" border="0" cellspacing="0" cellpadding="0">
     <tr>

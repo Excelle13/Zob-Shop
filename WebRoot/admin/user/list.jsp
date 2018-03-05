@@ -14,7 +14,15 @@
 
 </HEAD>
 <body>
-<br>
+&nbsp;
+<blockquote class="layui-elem-quote layui-text" style="margin-left: 10px;padding: 0;">
+    <ol class="breadcrumb" style="background: none">
+        <li><a href="#">主页</a></li>
+        <li><a href="#">用户管理</a></li>
+        <li class="active">用户信息</li>
+    </ol>
+</blockquote>
+
 <%--
 
 <form id="Form1" name="Form1" action="${pageContext.request.contextPath}/user/list.jsp" method="post">
@@ -102,8 +110,11 @@
     </table>
 </form>--%>
 
+
+<h3 style="text-align: center">用户信息</h3>
+<hr>
 <table class="table table-hover table-bordered">
-    <caption>用户列表</caption>
+    <%--<caption style="text-align: center">用户列表</caption>--%>
     <thead>
     <tr class="active">
         <th>序号</th>
@@ -119,7 +130,6 @@
             <td><s:property value="#status.count"/></td>
             <td><s:property value="#u.username"/></td>
             <td><s:property value="#u.name"/></td>
-
             <td>
                 <a href="${ pageContext.request.contextPath }/userAdmin_edit.action?uid=<s:property value="#u.uid"/>">
                     <div type="button" class="btn btn-primary btn-sm">编辑</div>
@@ -169,7 +179,7 @@
         </tr>
 
     </s:iterator>
-    <tr >
+    <tr>
 
     </tr>
     </tbody>
@@ -177,7 +187,6 @@
 </table>
 <div class="container">
     <ul class="pager">
-
         第<s:property value="pageBean.page"/>/<s:property value="pageBean.totalPage"/>页
         <s:if test="pageBean.page != 1">
             <li><a href="${ pageContext.request.contextPath }/userAdmin_findAll.action?page=1">首页</a></li>

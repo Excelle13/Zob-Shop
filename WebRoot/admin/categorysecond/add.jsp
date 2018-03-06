@@ -19,7 +19,7 @@
     <ol class="breadcrumb" style="background: none">
         <li><a href="#">主页</a></li>
         <li><a href="#">二级分类管理</a></li>
-        <li class="active">分类信息编辑</li>
+        <li class="active">分类信息增加</li>
     </ol>
 </blockquote>
 <h3 style="text-align: center">二级分类信息更改</h3>
@@ -47,15 +47,19 @@
 
 
             <div class="layui-form-item">
-                <label class="layui-form-label">所属的一级分类：</label>
+                <label class="layui-form-label">所属分类：</label>
                 <div class="layui-input-inline">
-                    <select name="category.cid">
+                    <select name="category.cid" >
+
+
                         <s:iterator var="c" value="cList">
                             <option value="<s:property value="#c.cid"/>"><s:property value="#c.cname"/></option>
                         </s:iterator>
+
                     </select>
                 </div>
             </div>
+
 
             <div class="layui-form-item">
                 <button class="layui-btn" type="submit">保存更改</button>
@@ -67,6 +71,7 @@
     </div>
 </div>
 
+<%--
 
 <form id="userAction_save_do" name="Form1" action="${pageContext.request.contextPath}/adminCategorySecond_save.action"
       method="post">
@@ -117,5 +122,11 @@
         </tr>
     </table>
 </form>
+
+--%>
+
+
 </body>
+<script type="text/javascript" src="${pageContext.request.contextPath}/layui/layui.all.js"></script>
+
 </HTML>

@@ -108,8 +108,36 @@
 
 </table>
 
+<div class="container">
+    <ul class="pager">
+        第
+        <li><a href="javascript:void(0)"><s:property value="pageBean.page"/></a></li>
+        /
 
+        <li><a href="javascript:void(0)"> <s:property value="pageBean.totalPage"/></a></li>
+
+        页
+        <s:if test="pageBean.page != 1">
+            <li><a href="${ pageContext.request.contextPath }/adminCategorySecond_findAll.action?page=1">首页</a></li>
+            <li>
+                <a href="${ pageContext.request.contextPath }/adminCategorySecond_findAll.action?page=<s:property value="pageBean.page-1"/>">上一页</a>
+            </li>
+        </s:if>
+
+        <s:if test="pageBean.page != pageBean.totalPage">
+            <li>
+                <a href="${ pageContext.request.contextPath }/adminCategorySecond_findAll.action?page=<s:property value="pageBean.page+1"/>">下一页</a>
+            </li>
+            <li>
+                <a href="${ pageContext.request.contextPath }/adminCategorySecond_findAll.action?page=<s:property value="pageBean.totalPage"/>">尾页</a>
+            </li>
+        </s:if>
+
+    </ul>
+</div>
 <br>
+<%--
+
 <form id="Form1" name="Form1" action="${pageContext.request.contextPath}/user/list.jsp" method="post">
     <table cellSpacing="1" cellPadding="0" width="100%" align="center" bgColor="#f5fafe" border="0">
         <TBODY>
@@ -193,6 +221,9 @@
         </TBODY>
     </table>
 </form>
+
+--%>
+
 </body>
 </HTML>
 

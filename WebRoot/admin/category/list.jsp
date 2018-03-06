@@ -106,6 +106,34 @@
 
 </table>
 
+<%--<div class="container">
+    <ul class="pager">
+        第
+        <li><a href="javascript:void(0)"><s:property value="pageBean.page"/></a></li>
+        /
+
+        <li><a href="javascript:void(0)"> <s:property value="pageBean.totalPage"/></a></li>
+
+        页
+        <s:if test="pageBean.page != 1">
+            <li><a href="${ pageContext.request.contextPath }/adminCategorySecond_findAll.action?page=1">首页</a></li>
+            <li>
+                <a href="${ pageContext.request.contextPath }/adminCategorySecond_findAll.action?page=<s:property value="pageBean.page-1"/>">上一页</a>
+            </li>
+        </s:if>
+
+        <s:if test="pageBean.page != pageBean.totalPage">
+            <li>
+                <a href="${ pageContext.request.contextPath }/adminCategorySecond_findAll.action?page=<s:property value="pageBean.page+1"/>">下一页</a>
+            </li>
+            <li>
+                <a href="${ pageContext.request.contextPath }/adminCategorySecond_findAll.action?page=<s:property value="pageBean.totalPage"/>">尾页</a>
+            </li>
+        </s:if>
+
+    </ul>
+</div>--%>
+
 
 <br>
 

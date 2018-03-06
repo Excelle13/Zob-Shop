@@ -195,7 +195,7 @@
             </li>
         </s:if>
 
-        <s:if test="pageBean.page != 1">
+        <s:if test="pageBean.page != pageBean.totalPage">
             <li>
                 <a href="${ pageContext.request.contextPath }/userAdmin_findAll.action?page=<s:property value="pageBean.page+1"/>">下一页</a>
             </li>

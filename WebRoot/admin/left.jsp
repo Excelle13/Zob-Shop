@@ -1,4 +1,6 @@
 <%@ page language="java" pageEncoding="UTF-8" %>
+<%@ taglib uri="/struts-tags" prefix="s" %>
+
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
@@ -53,6 +55,8 @@
                 <dl class="layui-nav-child">
                     <dd><a href="${pageContext.request.contextPath}/userAdmin_findAll.action?page=1" target="mainFrame">用户管理</a>
                     </dd>
+                    <dd><a href="${pageContext.request.contextPath}/userAdmin_findAll.action?page=1" target="mainFrame">用户级别</a>
+                    </dd>
                 </dl>
             </li>
             <li class="layui-nav-item">
@@ -65,32 +69,43 @@
             <li class="layui-nav-item">
                 <a href="javascript:;">二级分类管理</a>
                 <dl class="layui-nav-child">
-                    <dd><a href="${pageContext.request.contextPath}/adminCategorySecond_findAll.action?page=1" target="mainFrame">二级分类管理</a>
+                    <dd><a href="${pageContext.request.contextPath}/adminCategorySecond_findAll.action?page=1"
+                           target="mainFrame">二级分类管理</a>
                     </dd>
                 </dl>
             </li>
+
             <li class="layui-nav-item">
                 <a href="javascript:;">商品管理</a>
                 <dl class="layui-nav-child">
-                    <dd><a href="${pageContext.request.contextPath}/adminProduct_findAll.action?page=1" target="mainFrame">商品管理</a>
+                    <dd><a href="${pageContext.request.contextPath}/adminProduct_findAll.action?page=1"
+                           target="mainFrame">商品管理</a>
                     </dd>
                 </dl>
             </li>
-            <li class="layui-nav-item">
-                <a href="javascript:;">订单管理</a>
-                <dl class="layui-nav-child">
-                    <dd><a href="${pageContext.request.contextPath}/adminOrder_findAll.action?page=1" target="mainFrame">订单管理</a>
-                    </dd>
-                </dl>
-            </li>
-            <li class="layui-nav-item"><a href="javascript:;">系统设置</a>
-                <dl class="layui-nav-child">
-                    <dd><a href="javascript:;">皮肤管理</a></dd>
-                    <dd><a href="javascript:;">通知管理</a></dd>
-                    <dd><a href="javascript:;">系统更新</a></dd>
-                </dl>
-            </li>
-            <li class="layui-nav-item"><a href="">更多功能</a></li>
+
+            <%--#session.existAdminUser.username--%>
+            <s:if test="#session.existAdminUser.username=='admin'">
+                <li class="layui-nav-item">
+                    <a href="javascript:;">订单管理</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="${pageContext.request.contextPath}/adminOrder_findAll.action?page=1"
+                               target="mainFrame">订单管理</a>
+                        </dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item"><a href="javascript:;">系统设置</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="javascript:;">皮肤管理</a></dd>
+                        <dd><a href="javascript:;">通知管理</a></dd>
+                        <dd><a href="javascript:;">系统更新</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item"><a href="">更多功能</a></li>
+
+
+            </s:if>
+
         </ul>
     </div>
 </div>

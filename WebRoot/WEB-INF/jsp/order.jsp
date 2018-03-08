@@ -14,11 +14,11 @@
 </head>
 <body>
 
-<div class="container header">
+<%--<div class="container1 header">
     <div class="span5">
         <div class="logo">
             <a href="./网上商城/index.htm">
-                <img src="${pageContext.request.contextPath}/image/r___________renleipic_01/logo.gif" alt="传智播客"/>
+                <img src="${pageContext.request.contextPath}/image/r___________renleipic_01/logo.gif" alt=""/>
             </a>
         </div>
     </div>
@@ -29,19 +29,19 @@
         </div>
     </div>
 
-    <%@ include file="menu.jsp" %>
 
-</div>
+</div>--%>
+<%@ include file="menu.jsp" %>
 
-<div class="container cart">
+<div class="container1 cart">
 
     <div class="span24">
 
-        <div class="step step1">
+        <div class="step step1" style="padding-top: 10px;padding-bottom: 50px">
             <ul>
-
-                <li class="current"></li>
-                <li>生成订单成功</li>
+                <blockquote class="layui-elem-quote" >
+                    订单生成成功
+                </blockquote>
             </ul>
         </div>
 
@@ -134,7 +134,7 @@
     </div>
 
 </div>
-<div class="container footer">
+<div class="container1 footer">
     <div class="span24">
         <div class="footerAd">
             <img src="image\r___________renleipic_01/footer.jpg" alt="我们的优势" title="我们的优势" height="52" width="950">

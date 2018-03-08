@@ -10,36 +10,197 @@
     <link href="${pageContext.request.contextPath}/css/slider.css" rel="stylesheet" type="text/css"/>
     <link href="${pageContext.request.contextPath}/css/common.css" rel="stylesheet" type="text/css"/>
     <link href="${pageContext.request.contextPath}/css/index.css" rel="stylesheet" type="text/css"/>
+    <link href="${pageContext.request.contextPath}/swiper/css/swiper.min.css" rel="stylesheet" type="text/css"/>
+
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/layui/css/layui.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/bootstrap-3.3.7/css/bootstrap.min.css">
+    <script language="javascript" src="${pageContext.request.contextPath}/js/jquery-3.3.1.min.js"></script>
+    <script language="javascript" src="${pageContext.request.contextPath}/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script language="javascript" src="${pageContext.request.contextPath}/swiper/js/swiper.min.js"></script>
+
 
 </head>
 <body>
+<%--<nav class="navbar navbar-fixed-top  navbar-inverse " style="z-index: 10001">
+    <div class="container-fluid" style="margin-right: 30px">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">ZOB商城</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="${ pageContext.request.contextPath }/index.action">首页</a></li>
+                <li><a href="#about">购物指南</a></li>
+                <li><a href="#contact">关于我们</a></li>
+            </ul>
 
-<div class="container header">
-    <div class="span5">
-        <div class="logo">
+            <form class="navbar-form navbar-left">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="你想要什么？">
+                </div>
+                <button type="submit" class="btn btn-default">搜索</button>
+            </form>
+
+            <ul class="nav navbar-nav navbar-right">
+
+                <s:if test="#session.existUser == null">
+                    <li id="headerLogin" class="headerLogin" style="display: list-item;">
+                        <a href="${ pageContext.request.contextPath }/user_loginPage.action">登录</a>
+                    </li>
+                    <li id="headerRegister" class="headerRegister"
+                        style="display: list-item;"><a
+                            href="${ pageContext.request.contextPath }/user_registPage.action">注册</a>
+                    </li>
+                </s:if>
+                <s:else>
+
+                    <li style="padding: auto 0;">
+                        <img width="45" src="${pageContext.request.contextPath}/image/touxiang.jpg" alt="..."
+                             class="img-circle img-responsive">
+                    </li>
+
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                           aria-expanded="false"><s:property value="#session.existUser.name"/> <span
+                                class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">个人中心</a></li>
+                            <li><a href="#">设置</a></li>
+                            <li><a href="#">我的订单</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">更多功能</a></li>
+                        </ul>
+                    </li>
+
+                    <li id="headerLogin" class="headerLogin" style="display: list-item;">
+                        <a href="${ pageContext.request.contextPath }/order_findByUid.action?page=1">我的订单</a>
+
+                    </li>
+                    <li id="headerRegister" class="headerRegister"
+                        style="display: list-item;"><a
+                            href="${ pageContext.request.contextPath }/user_quit.action">退出</a>
+                    </li>
+
+
+                </s:else>
+
+
+            </ul>
+        </div><!-- /.nav-collapse -->
+    </div><!-- /.container -->
+</nav>--%>
+
+
+<%--<div class="container1 header" style="margin-top: 50px">--%>
+<%--   <div class="span5">
+       <div class="logo">
+           <a href="./网上商城/index.htm">
+               <img src="${pageContext.request.contextPath}/image/r___________renleipic_01/logo.gif" alt=""/>
+           </a>
+       </div>
+   </div>
+   <div class="span9">
+       <div class="headerAd">
+           <img src="${pageContext.request.contextPath}/image/header.jpg" width="320" height="50" alt="正品保障"
+                title="正品保障"/>
+       </div>
+   </div>
+
+   <div class="phone" style="float: left;">
+       客服热线: <strong>96008/53277764</strong>
+   </div>
+   <div class="cart" style="float: left;">
+       <a href="${ pageContext.request.contextPath }/cart_myCart.action">购物车</a>
+   </div>--%>
+
+
+<%--    <div>
+        <div style="float: left;">
             <a href="./网上商城/index.htm">
-                <img src="${pageContext.request.contextPath}/image/r___________renleipic_01/logo.gif" alt="传智播客"/>
+                <img src="${pageContext.request.contextPath}/image/r___________renleipic_01/logo.gif" alt=""/>
             </a>
         </div>
-    </div>
-    <div class="span9">
-        <div class="headerAd">
+        <div style="float: left;">
             <img src="${pageContext.request.contextPath}/image/header.jpg" width="320" height="50" alt="正品保障"
                  title="正品保障"/>
         </div>
-    </div>
+        <div style="float: left; margin-top: 15px;margin-left: 20px" class="phone">
+            客服热线: <strong>96008/53277764</strong>
+        </div>
+        <div style="float: left;margin-top: 15px;margin-left: 50px" class="cart">
+            <a href="${ pageContext.request.contextPath }/cart_myCart.action">购物车</a>
+        </div>
+    </div>--%>
 
-    <%@ include file="menu.jsp" %>
+
+<%--</div>--%>
+<%@ include file="menu.jsp" %>
+
+
+<style type="text/css">
+    .swiper-container {
+        width: 100%;
+        height: auto;
+    }
+</style>
+<div class="swiper-container" style="margin-bottom: 10px">
+    <div class="swiper-wrapper">
+
+        <div class="swiper-slide"><img src="${pageContext.request.contextPath}/image/tb/2.jpg" class="img-responsive"
+                                       style="width: 100%;" alt=""></div>
+        <div class="swiper-slide"><img src="${pageContext.request.contextPath}/image/tb/4.jpg" class="img-responsive"
+                                       style="width: 100%;" alt=""></div>
+        <div class="swiper-slide"><img src="${pageContext.request.contextPath}/image/tb/3.jpg" class="img-responsive"
+                                       style="width: 100%;" alt=""></div>
+        <div class="swiper-slide"><img src="${pageContext.request.contextPath}/image/tb/1.jpg" class="img-responsive"
+                                       style="width: 100%;" alt=""></div>
+    </div>
+    <!-- 如果需要分页器 -->
+    <div class="swiper-pagination"></div>
+
+    <!-- 如果需要导航按钮 -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
 
 </div>
 
-<div class="container index">
+<script>
+    var mySwiper = new Swiper('.swiper-container', {
+        direction: 'horizontal',
+        speed: 300,
+        autoplay: {
+            delay: 2000
+        },
+        loop: true,
 
+        // 如果需要分页器
+        pagination: {
+            el: '.swiper-pagination',
+        },
+
+        // 如果需要前进后退按钮
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+    })
+</script>
+
+
+<div class="container1 index">
 
     <div class="span24">
         <div id="hotProduct" class="hotProduct clearfix">
             <div class="title">
-                <strong>热门商品</strong>
+                <strong> <span class="glyphicon glyphicon-flash"></span>&nbsp;热门商品</strong>
                 <!-- <a  target="_blank"></a> -->
             </div>
             <ul class="tab">
@@ -168,10 +329,12 @@
             </ul>
         </div>
     </div>
+
+
     <div class="span24">
         <div id="newProduct" class="newProduct clearfix">
             <div class="title">
-                <strong>最新商品</strong>
+                <strong> <span class="glyphicon glyphicon-tag"></span>&nbsp;最新商品</strong>
                 <a target="_blank"></a>
             </div>
             <ul class="tab">
@@ -301,6 +464,142 @@
             </ul>
         </div>
     </div>
+
+    <div class="span24">
+        <div id="youNeed" class="newProduct clearfix">
+            <div class="title">
+                <strong> <span class="glyphicon glyphicon-tag"></span>&nbsp;你可能喜欢的</strong>
+                <a target="_blank"></a>
+            </div>
+            <ul class="tab">
+                <li class="current">
+                    <a href="./蔬菜分类.htm?tagIds=2" target="_blank"></a>
+                </li>
+                <li>
+                    <a target="_blank"></a>
+                </li>
+                <li>
+                    <a target="_blank"></a>
+                </li>
+            </ul>
+            <!-- 					<div class="newProductAd">
+									<img src="${pageContext.request.contextPath}/image/q.jpg" width="260" height="343" alt="最新商品" title="最新商品">
+						</div>
+						 -->
+            <ul class="tabContent" style="display: block;">
+                <s:iterator var="p" value="nList">
+                    <li>
+                        <a href="${ pageContext.request.contextPath }/product_findByPid.action?pid=<s:property value="#p.pid"/>"
+                           target="_blank"><img src="${pageContext.request.contextPath}/<s:property value="#p.image"/>"
+                                                data-original="http://storage.shopxx.net/demo-image/3.0/201301/4a51167a-89d5-4710-aca2-7c76edc355b8-thumbnail.jpg"
+                                                style="display: block;"></a></li>
+                    </li>
+                </s:iterator>
+            </ul>
+            <ul class="tabContent" style="display: none;">
+                <li>
+                    <a target="_blank"><img
+                            src="./Mango商城 - Powered By Mango Team_files/b04a22f5-267d-4e33-ac58-dda941eeaf84-thumbnail.jpg"
+                            data-original="http://storage.shopxx.net/demo-image/3.0/201301/b04a22f5-267d-4e33-ac58-dda941eeaf84-thumbnail.jpg"
+                            style="display: block;"></a>
+                </li>
+                <li>
+                    <a target="_blank"><img
+                            src="./Mango商城 - Powered By Mango Team_files/ca3043f5-dbb0-4a03-9bb6-8274f78b5d7e-thumbnail.jpg"
+                            data-original="http://storage.shopxx.net/demo-image/3.0/201301/ca3043f5-dbb0-4a03-9bb6-8274f78b5d7e-thumbnail.jpg"
+                            style="display: block;"></a>
+                </li>
+                <li>
+                    <a target="_blank"><img
+                            src="./Mango商城 - Powered By Mango Team_files/a2ac0816-37e4-477a-b179-e64f71252cf5-thumbnail.jpg"
+                            data-original="http://storage.shopxx.net/demo-image/3.0/201301/a2ac0816-37e4-477a-b179-e64f71252cf5-thumbnail.jpg"
+                            style="display: block;"></a>
+                </li>
+                <li>
+                    <a target="_blank"><img
+                            src="./Mango商城 - Powered By Mango Team_files/fbb80ec8-a1d3-49de-b83b-79eae4b1ff69-thumbnail.jpg"
+                            data-original="http://storage.shopxx.net/demo-image/3.0/201301/fbb80ec8-a1d3-49de-b83b-79eae4b1ff69-thumbnail.jpg"
+                            style="display: block;"></a>
+                </li>
+                <li>
+                    <a target="_blank"><img
+                            src="./Mango商城 - Powered By Mango Team_files/bb99deac-0b33-48f1-a3ad-e8310516be07-thumbnail.jpg"
+                            data-original="http://storage.shopxx.net/demo-image/3.0/201301/bb99deac-0b33-48f1-a3ad-e8310516be07-thumbnail.jpg"
+                            style="display: block;"></a>
+                </li>
+                <li>
+                    <a target="_blank"><img
+                            src="./Mango商城 - Powered By Mango Team_files/7b3c0647-1016-4d13-8b84-4d63818e1179-thumbnail.jpg"
+                            data-original="http://storage.shopxx.net/demo-image/3.0/201301/7b3c0647-1016-4d13-8b84-4d63818e1179-thumbnail.jpg"
+                            style="display: block;"></a>
+                </li>
+                <li>
+                    <a target="_blank"><img
+                            src="./Mango商城 - Powered By Mango Team_files/3c79f82f-f136-48aa-9e81-7e10fbb3de2a-thumbnail.jpg"
+                            data-original="http://storage.shopxx.net/demo-image/3.0/201301/3c79f82f-f136-48aa-9e81-7e10fbb3de2a-thumbnail.jpg"
+                            style="display: block;"></a>
+                </li>
+                <li>
+                    <a target="_blank"><img
+                            src="./Mango商城 - Powered By Mango Team_files/b998f840-91fc-41b6-b73d-70587babf760-thumbnail.jpg"
+                            data-original="http://storage.shopxx.net/demo-image/3.0/201301/b998f840-91fc-41b6-b73d-70587babf760-thumbnail.jpg"
+                            style="display: block;"></a>
+                </li>
+            </ul>
+            <ul class="tabContent" style="display: none;">
+                <li>
+                    <a target="_blank"><img
+                            src="./Mango商城 - Powered By Mango Team_files/9f164e13-bcaa-48a6-9b35-0ca96629f614-thumbnail.jpg"
+                            data-original="http://storage.shopxx.net/demo-image/3.0/201301/9f164e13-bcaa-48a6-9b35-0ca96629f614-thumbnail.jpg"
+                            style="display: block;"></a>
+                </li>
+                <li>
+                    <a target="_blank"><img
+                            src="./Mango商城 - Powered By Mango Team_files/1a3ad7de-7ee9-4530-b89a-46375219beb5-thumbnail.jpg"
+                            data-original="http://storage.shopxx.net/demo-image/3.0/201301/1a3ad7de-7ee9-4530-b89a-46375219beb5-thumbnail.jpg"
+                            style="display: block;"></a>
+                </li>
+                <li>
+                    <a target="_blank"><img
+                            src="./Mango商城 - Powered By Mango Team_files/7acae4ac-5909-4142-8b20-19c5462859d6-thumbnail.jpg"
+                            data-original="http://storage.shopxx.net/demo-image/3.0/201301/7acae4ac-5909-4142-8b20-19c5462859d6-thumbnail.jpg"
+                            style="display: block;"></a>
+                </li>
+                <li>
+                    <a target="_blank"><img
+                            src="./Mango商城 - Powered By Mango Team_files/ea566af4-0cdb-4017-a8c7-27e407794204-thumbnail.jpg"
+                            data-original="http://storage.shopxx.net/demo-image/3.0/201301/ea566af4-0cdb-4017-a8c7-27e407794204-thumbnail.jpg"
+                            style="display: block;"></a>
+                </li>
+                <li>
+                    <a target="_blank"><img
+                            src="./Mango商城 - Powered By Mango Team_files/dea31d42-fa3e-4b69-a631-51ca7c79f032-thumbnail.jpg"
+                            data-original="http://storage.shopxx.net/demo-image/3.0/201301/dea31d42-fa3e-4b69-a631-51ca7c79f032-thumbnail.jpg"
+                            style="display: block;"></a>
+                </li>
+                <li>
+                    <a target="_blank"><img
+                            src="./Mango商城 - Powered By Mango Team_files/1c81f492-a3d7-4c06-8658-bc2c76808cd3-thumbnail.jpg"
+                            data-original="http://storage.shopxx.net/demo-image/3.0/201301/1c81f492-a3d7-4c06-8658-bc2c76808cd3-thumbnail.jpg"
+                            style="display: block;"></a>
+                </li>
+                <li>
+                    <a target="_blank"><img
+                            src="./Mango商城 - Powered By Mango Team_files/f1174ca6-6bdf-4d0b-86e6-5455bc8e89ad-thumbnail.jpg"
+                            data-original="http://storage.shopxx.net/demo-image/3.0/201301/f1174ca6-6bdf-4d0b-86e6-5455bc8e89ad-thumbnail.jpg"
+                            style="display: block;"></a>
+                </li>
+                <li>
+                    <a target="_blank"><img
+                            src="./Mango商城 - Powered By Mango Team_files/2971c96e-9f11-4491-9faf-9ea7e1fec53c-thumbnail.jpg"
+                            data-original="http://storage.shopxx.net/demo-image/3.0/201301/2971c96e-9f11-4491-9faf-9ea7e1fec53c-thumbnail.jpg"
+                            style="display: block;"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
     <div class="span24">
         <div class="friendLink">
             <dl>
@@ -345,7 +644,7 @@
         </div>
     </div>
 </div>
-<div class="container footer">
+<div class="container1 footer">
     <div class="span24">
         <div class="footerAd">
             <img src="${pageContext.request.contextPath}/image/footer.jpg" width="950" height="52" alt="我们的优势"
@@ -396,5 +695,7 @@
         <div class="copyright">Copyright © 2005-2015 网上商城 版权所有</div>
     </div>
 </div>
+
+
 </body>
 </html>

@@ -133,13 +133,13 @@ textarea {
 
 /* ---------- Grid ---------- */
 
-div.container {
+div.container1 {
 	width: 950px;
 	margin: 0px auto;
 	*zoom: 1;
 }
 
-div.container:after {
+div.container1:after {
 	height: 0px;
 	display: block;
 	clear: both;
@@ -148,295 +148,296 @@ div.container:after {
 	content: "\0020";
 }
 
-div.container .span1, div.container .span2, div.container .span3, div.container .span4, div.container .span5, div.container .span6, div.container .span7, div.container .span8, div.container .span9, div.container .span10, div.container .span11, div.container .span12, div.container .span13, div.container .span14, div.container .span15, div.container .span16, div.container .span17, div.container .span18, div.container .span19, div.container .span20, div.container .span21, div.container .span22, div.container .span23, div.container .span24 {
+div.container1 .span1, div.container1 .span2, div.container1 .span3, div.container1 .span4, div.container1 .span5, div.container1 .span6, div.container1 .span7, div.container1 .span8, div.container1 .span9, div.container1 .span10, div.container1 .span11, div.container1 .span12, div.container1 .span13, div.container1 .span14, div.container1 .span15, div.container1 .span16, div.container1 .span17, div.container1 .span18, div.container1 .span19, div.container1 .span20, div.container1 .span21, div.container1 .span22, div.container1 .span23, div.container1 .span24 {
 	_display: inline;
 	float: left;
 	margin-right: 10px;
 	overflow: hidden;
 }
 
-div.container .span1 {
+div.container1 .span1 {
 	width: 30px;
 }
 
-div.container .span2 {
+div.container1 .span2 {
 	width: 70px;
 }
 
-div.container .span3 {
+div.container1 .span3 {
 	width: 110px;
 }
 
-div.container .span4 {
+div.container1 .span4 {
 	width: 150px;
 }
 
-div.container .span5 {
+div.container1 .span5 {
 	width: 190px;
 }
 
-div.container .span6 {
+div.container1 .span6 {
 	width: 230px;
 }
 
-div.container .span7 {
+div.container1 .span7 {
 	width: 270px;
 }
 
-div.container .span8 {
+div.container1 .span8 {
 	width: 310px;
 }
 
-div.container .span9 {
+div.container1 .span9 {
 	width: 350px;
 }
 
-div.container .span10 {
+div.container1 .span10 {
 	width: 390px;
 }
 
-div.container .span11 {
+div.container1 .span11 {
 	width: 430px;
 }
 
-div.container .span12 {
+div.container1 .span12 {
 	width: 470px;
 }
 
-div.container .span13 {
+div.container1 .span13 {
 	width: 510px;
 }
 
-div.container .span14 {
+div.container1 .span14 {
 	width: 550px;
 }
 
-div.container .span15 {
+div.container1 .span15 {
 	width: 590px;
 }
 
-div.container .span16 {
+div.container1 .span16 {
 	width: 630px;
 }
 
-div.container .span17 {
+div.container1 .span17 {
 	width: 670px;
 }
 
-div.container .span18 {
+div.container1 .span18 {
 	width: 710px;
 }
 
-div.container .span19 {
+div.container1 .span19 {
 	width: 750px;
 }
 
-div.container .span20 {
+div.container1 .span20 {
 	width: 790px;
 }
 
-div.container .span21 {
+div.container1 .span21 {
 	width: 830px;
 }
 
-div.container .span22 {
+div.container1 .span22 {
 	width: 870px;
 }
 
-div.container .span23 {
+div.container1 .span23 {
 	width: 910px;
 }
 
-div.container .span24 {
+div.container1 .span24 {
 	width: 950px;
+	/*height: 36px;*/
 	margin-right: 0px;
 }
 
-div.container .prepend1 {
+div.container1 .prepend1 {
 	padding-left: 40px;
 }
 
-div.container .prepend2 {
+div.container1 .prepend2 {
 	padding-left: 80px;
 }
 
-div.container .prepend3 {
+div.container1 .prepend3 {
 	padding-left: 120px;
 }
 
-div.container .prepend4 {
+div.container1 .prepend4 {
 	padding-left: 160px;
 }
 
-div.container .prepend5 {
+div.container1 .prepend5 {
 	padding-left: 200px;
 }
 
-div.container .prepend6 {
+div.container1 .prepend6 {
 	padding-left: 240px;
 }
 
-div.container .prepend7 {
+div.container1 .prepend7 {
 	padding-left: 280px;
 }
 
-div.container .prepend8 {
+div.container1 .prepend8 {
 	padding-left: 320px;
 }
 
-div.container .prepend9 {
+div.container1 .prepend9 {
 	padding-left: 360px;
 }
 
-div.container .prepend10 {
+div.container1 .prepend10 {
 	padding-left: 400px;
 }
 
-div.container .prepend11 {
+div.container1 .prepend11 {
 	padding-left: 440px;
 }
 
-div.container .prepend12 {
+div.container1 .prepend12 {
 	padding-left: 480px;
 }
 
-div.container .prepend13 {
+div.container1 .prepend13 {
 	padding-left: 520px;
 }
 
-div.container .prepend14 {
+div.container1 .prepend14 {
 	padding-left: 560px;
 }
 
-div.container .prepend15 {
+div.container1 .prepend15 {
 	padding-left: 600px;
 }
 
-div.container .prepend16 {
+div.container1 .prepend16 {
 	padding-left: 640px;
 }
 
-div.container .prepend17 {
+div.container1 .prepend17 {
 	padding-left: 680px;
 }
 
-div.container .prepend18 {
+div.container1 .prepend18 {
 	padding-left: 720px;
 }
 
-div.container .prepend19 {
+div.container1 .prepend19 {
 	padding-left: 760px;
 }
 
-div.container .prepend20 {
+div.container1 .prepend20 {
 	padding-left: 800px;
 }
 
-div.container .prepend21 {
+div.container1 .prepend21 {
 	padding-left: 840px;
 }
 
-div.container .prepend22 {
+div.container1 .prepend22 {
 	padding-left: 880px;
 }
 
-div.container .prepend23 {
+div.container1 .prepend23 {
 	padding-left: 920px;
 }
 
-div.container .append1 {
+div.container1 .append1 {
 	padding-right: 40px;
 }
 
-div.container .append2 {
+div.container1 .append2 {
 	padding-right: 80px;
 }
 
-div.container .append3 {
+div.container1 .append3 {
 	padding-right: 120px;
 }
 
-div.container .append4 {
+div.container1 .append4 {
 	padding-right: 160px;
 }
 
-div.container .append5 {
+div.container1 .append5 {
 	padding-right: 200px;
 }
 
-div.container .append6 {
+div.container1 .append6 {
 	padding-right: 240px;
 }
 
-div.container .append7 {
+div.container1 .append7 {
 	padding-right: 280px;
 }
 
-div.container .append8 {
+div.container1 .append8 {
 	padding-right: 320px;
 }
 
-div.container .append9 {
+div.container1 .append9 {
 	padding-right: 360px;
 }
 
-div.container .append10 {
+div.container1 .append10 {
 	padding-right: 400px;
 }
 
-div.container .append11 {
+div.container1 .append11 {
 	padding-right: 440px;
 }
 
-div.container .append12 {
+div.container1 .append12 {
 	padding-right: 480px;
 }
 
-div.container .append13 {
+div.container1 .append13 {
 	padding-right: 520px;
 }
 
-div.container .append14 {
+div.container1 .append14 {
 	padding-right: 560px;
 }
 
-div.container .append15 {
+div.container1 .append15 {
 	padding-right: 600px;
 }
 
-div.container .append16 {
+div.container1 .append16 {
 	padding-right: 640px;
 }
 
-div.container .append17 {
+div.container1 .append17 {
 	padding-right: 680px;
 }
 
-div.container .append18 {
+div.container1 .append18 {
 	padding-right: 720px;
 }
 
-div.container .append19 {
+div.container1 .append19 {
 	padding-right: 760px;
 }
 
-div.container .append20 {
+div.container1 .append20 {
 	padding-right: 800px;
 }
 
-div.container .append21 {
+div.container1 .append21 {
 	padding-right: 840px;
 }
 
-div.container .append22 {
+div.container1 .append22 {
 	padding-right: 880px;
 }
 
-div.container .append23 {
+div.container1 .append23 {
 	padding-right: 920px;
 }
 
-div.container .last {
+div.container1 .last {
 	margin-right: 0px;
 }
 
@@ -796,14 +797,14 @@ div.header .headerLogin, div.header .headerRegister, div.header .headerUsername,
 }
 
 div.header .cart {
-	width: 60px;
+	/*width: 60px;*/
 	height: 28px;
 	line-height: 28px;
 	_display: inline;
 	float: left;
 	padding-left: 30px;
-	margin-left: 80px;
-	margin-bottom: 4px;
+	/*margin-left: 80px;*/
+	/*margin-bottom: 4px;*/
 	background: url(../images/common.gif) -210px -180px no-repeat;
 }
 

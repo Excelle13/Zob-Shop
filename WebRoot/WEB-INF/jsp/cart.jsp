@@ -14,11 +14,11 @@
 
 </head>
 <body>
-<div class="container header">
+<%--<div class="container1 header">
     <div class="span5">
         <div class="logo">
             <a href="http://localhost:8080/mango/">
-                <img src="${pageContext.request.contextPath}/image/r___________renleipic_01/logo.gif" alt="传智播客">
+                <img src="${pageContext.request.contextPath}/image/r___________renleipic_01/logo.gif" alt="">
             </a>
         </div>
     </div>
@@ -31,12 +31,20 @@
 
     <%@ include file="menu.jsp" %>
 
-</div>
-<div class="container cart">
+</div>--%>
+<%@ include file="menu.jsp" %>
+<div class="container1 cart">
     <s:if test="#session.cart.cartItems.size() != 0">
         <div class="span24">
-            <div class="step step1">
-                购物车信息
+            <div class="step step1" style="padding-top: 10px;padding-bottom: 50px">
+                <ul>
+
+                        <%--<li class="current"></li>
+                        <li>我的订单</li>--%>
+                    <blockquote class="layui-elem-quote">
+                        购物车信息
+                    </blockquote>
+                </ul>
             </div>
             <table>
                 <tbody>
@@ -92,14 +100,16 @@
         </div>
     </s:if>
     <s:else>
+        <img src="${ pageContext.request.contextPath }/image/addcart.png" alt="">
         <div class="span24">
             <div class="step step1">
+                <img src="${ pageContext.request.contextPath }/image/addcart.png" alt="">
                 <span><h2>亲!您还没有购物!请先去购物!</h2></span>
             </div>
         </div>
     </s:else>
 </div>
-<div class="container footer">
+<div class="container1 footer">
     <div class="span24">
         <div class="footerAd">
             <img src="${pageContext.request.contextPath}/image/footer.jpg" width="950" height="52" alt="我们的优势"
@@ -147,7 +157,7 @@
         </ul>
     </div>
     <div class="span24">
-        <div class="copyright">Copyright © 2005-2015 网上商城 版权所有</div>
+        <div class="copyright">Copyright © 2018 ZOB 版权所有</div>
     </div>
 </div>
 </body>

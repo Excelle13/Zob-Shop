@@ -122,7 +122,7 @@
             <li class="layui-nav-item"><a href="">商品管理</a></li>
             <li class="layui-nav-item"><a href="">用户</a></li>
             <li class="layui-nav-item">
-                <a href="javascript:;">其它系统</a>
+                <a href="javascript:;">其它</a>
                 <dl class="layui-nav-child">
                     <dd><a href="">邮件管理</a></dd>
                     <dd><a href="">消息管理</a></dd>
@@ -134,14 +134,14 @@
             <li class="layui-nav-item">
                 <a href="javascript:;">
                     <img src="${pageContext.request.contextPath}/image/icon.png" class="layui-nav-img">
-                    贤心
+                    <s:property value="#session.existAdminUser.username"/>
                 </a>
                 <dl class="layui-nav-child">
                     <dd><a href="">基本资料</a></dd>
                     <dd><a href="">安全设置</a></dd>
                 </dl>
             </li>
-            <li class="layui-nav-item"><a href="">退了</a></li>
+            <li class="layui-nav-item"><a target="_parent" href="http://localhost:8080/admin/index.jsp">退出</a></li>
         </ul>
     </div>
 </div>

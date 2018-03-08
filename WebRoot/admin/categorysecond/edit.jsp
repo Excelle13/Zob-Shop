@@ -4,6 +4,8 @@
 <HEAD>
     <meta http-equiv="Content-Language" content="zh-cn">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script language="javascript" src="${pageContext.request.contextPath}/js/public.js"></script>
+
     <LINK href="${pageContext.request.contextPath}/css/Style1.css" type="text/css" rel="stylesheet">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/layui/css/layui.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/bootstrap-3.3.7/css/bootstrap.min.css">
@@ -49,7 +51,7 @@
             <div class="layui-form-item">
                 <label class="layui-form-label">所属分类：</label>
                 <div class="layui-input-inline">
-                    <select name="category.cid">
+                    <select name="cid">
 
                         <s:iterator var="c" value="cList">
                             <option value="<s:property value="#c.cid"/>"

@@ -90,7 +90,7 @@
         <canvas id="myChart1"></canvas>
     </div>
     <div class="chart-div">
-        <h3 style="text-align: center">店铺各类数量</h3>
+        <h3 style="text-align: center">店铺热门商品SKU</h3>
         <canvas id="myChart2"></canvas>
     </div>
     <div class="chart-div">
@@ -148,7 +148,7 @@
         data: {
             labels: ["男装", "女装", "手机", "电脑", "户外用品", "珠宝饰品"],
             datasets: [{
-                label: '商品数量',
+                label: 'SKU',
                 data: [16, 50, 5,5, 20, 30],
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)',
@@ -184,17 +184,17 @@
     var myChart = new Chart(ctx, {
         type: 'pie',
         data: {
-            labels: ["韩版女装", "精选男装", "女靴", "Green", "Purple", "Orange"],
+            labels: ["韩版女装", "精选男装", "女靴", "毛呢大衣", "温暖毛衣", "电脑/手机"],
             datasets: [{
                 label: '# of Votes',
-                data: [12, 19, 3, 5, 2, 3],
+                data: [20, 15, 10, 8, 4, 2],
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(160, 107, 255, 0.5)',
                     'rgba(255, 206, 86, 0.2)',
                     'rgba(75, 192, 192, 0.2)',
                     'rgba(153, 102, 255, 0.2)',
-                    'rgba(255, 159, 64, 0.2)'
+                    'rgba(255, 57, 57, 0.5)'
                 ],
                 borderColor: [
                     'rgba(255,99,132,1)',

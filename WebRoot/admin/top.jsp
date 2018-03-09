@@ -133,7 +133,12 @@
         <ul class="layui-nav layui-layout-right">
             <li class="layui-nav-item">
                 <a href="javascript:;">
-                    <img src="${pageContext.request.contextPath}/image/icon.png" class="layui-nav-img">
+                    <s:if test="#session.existAdminUser.username=='admin'">
+                        <img src="${pageContext.request.contextPath}/image/icon.png" class="layui-nav-img">
+                    </s:if>
+                    <s:else>
+                        <img src="${pageContext.request.contextPath}/image/staff.jpg" class="layui-nav-img">
+                    </s:else>
                     <s:property value="#session.existAdminUser.username"/>
                 </a>
                 <dl class="layui-nav-child">

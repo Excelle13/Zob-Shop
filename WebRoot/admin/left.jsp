@@ -50,30 +50,36 @@
     <div class="layui-side-scroll">
         <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
         <ul class="layui-nav layui-nav-tree" lay-filter="test">
-            <li class="layui-nav-item layui-nav-itemed">
-                <a class="" href="javascript:;">用户管理</a>
-                <dl class="layui-nav-child">
-                    <dd><a href="${pageContext.request.contextPath}/userAdmin_findAll.action?page=1" target="mainFrame">用户管理</a>
-                    </dd>
-                    <dd><a href="${pageContext.request.contextPath}/userAdmin_findAll.action?page=1" target="mainFrame">用户级别</a>
-                    </dd>
-                </dl>
-            </li>
+
+            <s:if test="#session.existAdminUser.username=='admin'">
+                <li class="layui-nav-item layui-nav-itemed">
+                    <a class="" href="javascript:;">用户管理</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="${pageContext.request.contextPath}/userAdmin_findAll.action?page=1"
+                               target="mainFrame">用户管理</a>
+                        </dd>
+                        <dd><a href="${pageContext.request.contextPath}/userAdmin_findAll.action?page=1"
+                               target="mainFrame">用户级别、爱好</a>
+                        </dd>
+                    </dl>
+                </li>
+            </s:if>
             <li class="layui-nav-item">
                 <a href="javascript:;">一级分类管理</a>
                 <dl class="layui-nav-child">
                     <dd><a href="${pageContext.request.contextPath}/adminCategory_findAll.action" target="mainFrame">一级分类管理</a>
                     </dd>
                 </dl>
-            </li>
-            <li class="layui-nav-item">
-                <a href="javascript:;">二级分类管理</a>
                 <dl class="layui-nav-child">
                     <dd><a href="${pageContext.request.contextPath}/adminCategorySecond_findAll.action?page=1"
                            target="mainFrame">二级分类管理</a>
                     </dd>
                 </dl>
             </li>
+            <%--            <li class="layui-nav-item">
+                            <a href="javascript:;">二级分类管理</a>
+
+                        </li>--%>
 
             <li class="layui-nav-item">
                 <a href="javascript:;">商品管理</a>
@@ -94,17 +100,16 @@
                         </dd>
                     </dl>
                 </li>
-                <li class="layui-nav-item"><a href="javascript:;">系统设置</a>
-                    <dl class="layui-nav-child">
-                        <dd><a href="javascript:;">皮肤管理</a></dd>
-                        <dd><a href="javascript:;">通知管理</a></dd>
-                        <dd><a href="javascript:;">系统更新</a></dd>
-                    </dl>
-                </li>
-                <li class="layui-nav-item"><a href="">更多功能</a></li>
-
-
             </s:if>
+            <li class="layui-nav-item"><a href="javascript:;">系统设置</a>
+                <dl class="layui-nav-child">
+                    <dd><a href="javascript:;">皮肤管理</a></dd>
+                    <dd><a href="javascript:;">通知管理</a></dd>
+                    <dd><a href="javascript:;">系统更新</a></dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item"><a href="">更多功能</a></li>
+
 
         </ul>
     </div>

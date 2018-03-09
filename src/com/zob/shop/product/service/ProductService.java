@@ -33,6 +33,12 @@ public class ProductService {
 		return productDao.findNew();
 	}
 
+
+	// 首页上用户喜好的
+	public List<Product> findUserLike() {
+		return productDao.findUserLike();
+	}
+
 	// 根据商品ID查询商品
 	public Product findByPid(Integer pid) {
 		return productDao.findByPid(pid);

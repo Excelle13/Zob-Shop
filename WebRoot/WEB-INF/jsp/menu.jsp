@@ -2,6 +2,8 @@
          pageEncoding="UTF-8" %>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/bootstrap-3.3.7/css/bootstrap.min.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/layui/css/layui.css">
+<script language="javascript" src="${pageContext.request.contextPath}/js/jquery-3.3.1.min.js"></script>
+<script language="javascript" src="${pageContext.request.contextPath}/bootstrap-3.3.7/js/bootstrap.min.js"></script>
 <%--<div class="span10 last" style="float: left;">
     &lt;%&ndash;<div class="topNav clearfix">
         <ul>
@@ -133,7 +135,12 @@
 
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                           aria-expanded="false"><s:property value="#session.existUser.name"/> <span
+                           aria-expanded="false"
+                                <s:if test="#session.existUser.name=='hezhaobo'">
+                                    style="color: red;"
+                                </s:if>
+
+                        ><s:property value="#session.existUser.name"/> <span
                                 class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a href="#">个人中心</a></li>

@@ -12,7 +12,6 @@
     <script language="javascript" src="${pageContext.request.contextPath}/js/jquery-3.3.1.min.js"></script>
     <script language="javascript" src="${pageContext.request.contextPath}/bootstrap-3.3.7/js/bootstrap.min.js"></script>
 
-
 </HEAD>
 <body>
 &nbsp;
@@ -121,8 +120,6 @@
         <th>序号</th>
         <th>用户名称</th>
         <th>真实姓名</th>
-        <th>用户等级</th>
-        <th>用户喜好</th>
         <th>编辑</th>
         <th>删除</th>
     </tr>
@@ -133,22 +130,6 @@
             <td><s:property value="#status.count"/></td>
             <td><s:property value="#u.username"/></td>
             <td><s:property value="#u.name"/></td>
-            <td>
-                <s:if test="#u.name=='hezhaobo'">
-                <img class="img-responsive img-circle" width="30"
-                     src="${pageContext.request.contextPath}/image/superVip.jpg" style="float: left;"alt=""> <span style="color:red;line-height: 29px; float: left;    margin-left: 10px;">超级会员</span>
-                </s:if>
-
-                <s:else>
-                  <img class="img-responsive img-circle" width="30" style="float: left;"
-                       src="${pageContext.request.contextPath}/image/simpleVip.jpg" alt=""> <span style="float: left;line-height: 29px;    margin-left: 10px;">普通会员</span>
-                </s:else>
-            </td>
-            <td>
-                <span>
-
-            </span>
-            </td>
             <td>
                 <a href="${ pageContext.request.contextPath }/userAdmin_edit.action?uid=<s:property value="#u.uid"/>">
                     <div type="button" class="btn btn-primary btn-sm">编辑</div>

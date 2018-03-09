@@ -12,6 +12,8 @@
     <script language="javascript" src="${pageContext.request.contextPath}/bootstrap-3.3.7/js/bootstrap.min.js"></script>
 
     <script type="text/javascript">
+
+
         function showDetail(oid) {
             var but = document.getElementById("but" + oid);
             var div1 = document.getElementById("div" + oid);
@@ -20,27 +22,27 @@
 //            })
 
 //            but.addEventListener('mouseover', function () {
-                if (but.value == "订单详情") {
-                    // 1.创建异步对象
-                    var xhr = createXmlHttp();
-                    // 2.设置监听
-                    xhr.onreadystatechange = function () {
-                        if (xhr.readyState == 4) {
-                            if (xhr.status == 200) {
+            if (but.value == "订单详情") {
+                // 1.创建异步对象
+                var xhr = createXmlHttp();
+                // 2.设置监听
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState == 4) {
+                        if (xhr.status == 200) {
 
-                                div1.innerHTML = xhr.responseText;
-                            }
+                            div1.innerHTML = xhr.responseText;
                         }
                     }
-                    // 3.打开连接
-                    xhr.open("GET", "${pageContext.request.contextPath}/adminOrder_findOrderItem.action?oid=" + oid + "&time=" + new Date().getTime(), true);
-                    // 4.发送
-                    xhr.send(null);
-                    but.value = "关闭";
-                } else {
-                    div1.innerHTML = "";
-                    but.value = "订单详情";
                 }
+                // 3.打开连接
+                xhr.open("GET", "${pageContext.request.contextPath}/adminOrder_findOrderItem.action?oid=" + oid + "&time=" + new Date().getTime(), true);
+                // 4.发送
+                xhr.send(null);
+                but.value = "关闭";
+            } else {
+                div1.innerHTML = "";
+                but.value = "订单详情";
+            }
 //            }
 
 //            );
@@ -105,20 +107,28 @@
             <td><s:property value="#o.name"/></td>
 
             <td
+
+                    <%--<s:property value="#o.state"/>--%>
+
+
             <s:if test="#o.state==1">
-                    未付款
+                <font color="blue">未发货</font>
             </s:if>
+
             <s:if test="#o.state==2">
                 <a href="${ pageContext.request.contextPath }/adminOrder_updateState.action?oid=<s:property value="#o.oid"/>">
                     <font color="blue">发货</font>
                 </a>
             </s:if>
+
             <s:if test="#o.state==3">
                 等待确认收货
             </s:if>
+
             <s:if test="#o.state==4">
                 订单完成
             </s:if>
+
             </td>
 
 
@@ -127,9 +137,8 @@
                 <input class="layui-btn layui-btn-primary" type="button" value="订单详情"
                        id="but<s:property value="#o.oid"/>"
                        onclick="showDetail(<s:property value="#o.oid"/>)"/>
-                <div id="div<s:property value="#o.oid"/>">
+                <div id="div<s:property value="#o.oid"/>"></div>
 
-                </div>
             </td>
 
         </tr>

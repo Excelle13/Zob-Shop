@@ -6,6 +6,7 @@
     <link href="${pageContext.request.contextPath}/css/Style1.css" type="text/css" rel="stylesheet"/>
     <style type="text/css">
         <!--
+
         body {
             background-color: #FFFFFF;
             margin-left: 0px;
@@ -98,7 +99,7 @@
         <canvas id="myChart3"></canvas>
     </div>
     <div class="chart-div">
-        <h3 style="text-align: center">今天支付订单数量</h3>
+        <h3 style="text-align: center">最近热度</h3>
         <canvas id="myChart4"></canvas>
     </div>
 </div>
@@ -222,15 +223,13 @@
     var myChart = new Chart(ctx, {
         type: 'polarArea',
         data: {
-            labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+            labels: ["衣服", "鞋子", "电子产品", "珠宝"],
             datasets: [{
-                label: '# of Votes',
-                data: [12, 19, 3, 5, 2, 3],
+                label: '',
+                data: [20, 19, 3, 5],
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)',
                     'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)',
                     'rgba(153, 102, 255, 0.2)',
                     'rgba(255, 159, 64, 0.2)'
                 ],
@@ -238,8 +237,6 @@
                     'rgba(255,99,132,1)',
                     'rgba(54, 162, 235, 1)',
                     'rgba(255, 206, 86, 1)',
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(153, 102, 255, 1)',
                     'rgba(255, 159, 64, 1)'
                 ],
                 borderWidth: 1

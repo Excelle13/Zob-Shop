@@ -11,6 +11,7 @@
     <link rel="icon" href="${pageContext.request.contextPath}/image/icon.png" type="image/png"/>
 
     <script>
+
         function checkForm() {
             // 校验用户名:
             // 获得用户名文本框的值:

@@ -11,10 +11,9 @@
 
     <link href="${pageContext.request.contextPath}/css/common.css" rel="stylesheet" type="text/css"/>
     <link href="${pageContext.request.contextPath}/css/login.css" rel="stylesheet" type="text/css"/>
-
-
 </head>
 <body>
+
 <%--
 <div class="container1 header">
     <div class="span5">
@@ -33,6 +32,7 @@
 
 
 </div>--%>
+
 <%@ include file="menu.jsp" %>
 <div class="container1 login">
     <div class="span12">

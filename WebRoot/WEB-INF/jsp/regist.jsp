@@ -336,7 +336,7 @@
         </ul>
     </div>
     <div class="span24">
-        <div class="copyright">Copyright © 2005-2015 网上商城 版权所有</div>
+        <div class="copyright">Copyright © 2018 网上商城 版权所有</div>
     </div>
 </div>
 <div id="_my97DP" style="position: absolute; top: -1970px; left: -1970px;">

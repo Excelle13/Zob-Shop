@@ -12,11 +12,11 @@
     <script language="javascript" src="${pageContext.request.contextPath}/js/jquery-3.3.1.min.js"></script>
     <script language="javascript" src="${pageContext.request.contextPath}/bootstrap-3.3.7/js/bootstrap.min.js"></script>
 
-
 </HEAD>
 <body>
 &nbsp;
 <blockquote class="layui-elem-quote layui-text" style="margin-left: 10px;padding: 0;">
+
     <ol class="breadcrumb" style="background: none">
         <li><a href="#">主页</a></li>
         <li><a href="#">用户管理</a></li>
@@ -133,21 +133,35 @@
             <td><s:property value="#status.count"/></td>
             <td><s:property value="#u.username"/></td>
             <td><s:property value="#u.name"/></td>
+
             <td>
                 <s:if test="#u.name=='hezhaobo'">
-                <img class="img-responsive img-circle" width="30"
-                     src="${pageContext.request.contextPath}/image/superVip.jpg" style="float: left;"alt=""> <span style="color:red;line-height: 29px; float: left;    margin-left: 10px;">超级会员</span>
+                    <img class="img-responsive img-circle" width="30"
+                         src="${pageContext.request.contextPath}/image/superVip.jpg" style="float: left;" alt=""> <span
+                        style="color:red;line-height: 29px; float: left;    margin-left: 10px;">超级会员</span>
                 </s:if>
 
                 <s:else>
-                  <img class="img-responsive img-circle" width="30" style="float: left;"
-                       src="${pageContext.request.contextPath}/image/simpleVip.jpg" alt=""> <span style="float: left;line-height: 29px;    margin-left: 10px;">普通会员</span>
+                    <img class="img-responsive img-circle" width="30" style="float: left;"
+                         src="${pageContext.request.contextPath}/image/simpleVip.jpg" alt=""> <span
+                        style="float: left;line-height: 29px;    margin-left: 10px;">普通会员</span>
                 </s:else>
             </td>
+
             <td>
                 <span>
+                    <s:if test="#u.name=='hezhaobo'">
+                        电脑|手机|男装
+                    </s:if>
 
-            </span>
+                    <s:if test="#u.name=='杨幂'">
+                        女鞋
+                    </s:if>
+
+                    <s:if test="#u.name=='刘恺威'">
+                        男装
+                    </s:if>
+                </span>
             </td>
             <td>
                 <a href="${ pageContext.request.contextPath }/userAdmin_edit.action?uid=<s:property value="#u.uid"/>">

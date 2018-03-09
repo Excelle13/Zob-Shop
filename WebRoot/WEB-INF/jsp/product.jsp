@@ -6,6 +6,8 @@
 <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
     <title>ZOB商城</title>
+    <link rel="icon" href="${pageContext.request.contextPath}/image/icon.png" type="image/png"/>
+
     <link href="${pageContext.request.contextPath}/css/common.css" rel="stylesheet" type="text/css"/>
     <link href="${pageContext.request.contextPath}/css/product.css" rel="stylesheet" type="text/css"/>
     <script>

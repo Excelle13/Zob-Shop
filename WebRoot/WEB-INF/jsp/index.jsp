@@ -467,12 +467,12 @@
 
     <div class="span24">
         <div id="youNeed" class="newProduct clearfix">
-            <div class="title">
+            <div class="title" style="background: #e91e63">
                 <strong> <span class="glyphicon glyphicon-tag"></span>&nbsp;你可能喜欢的</strong>
                 <a target="_blank"></a>
             </div>
-            <ul class="tab">
-                <li class="current">
+            <ul class="tab" style="background: #e91e63">
+                <li>
                     <a href="./蔬菜分类.htm?tagIds=2" target="_blank"></a>
                 </li>
                 <li>

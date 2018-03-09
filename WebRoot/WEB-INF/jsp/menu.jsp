@@ -59,15 +59,15 @@
                 <li><a href="#contact">关于我们</a></li>
             </ul>
 
-            <s:if test="1">
+            <s:if test="#session.existUser.name=='hezhaobo' || #session.existUser.name=='杨幂'|| #session.existUser.name=='刘恺威' ">
 
 
                 <s:if test="#session.existUser.name=='hezhaobo'">
                     <form class="navbar-form navbar-left"
-                          action="${pageContext.request.contextPath}product_findByCid.action?cid=1&page=1"
+                          action="${pageContext.request.contextPath}product_findByCid.action?cid=5&page=1"
                           method="post">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="潮流女装">
+                            <input type="text" class="form-control" placeholder="电脑">
                         </div>
                         <button type="submit" class="btn btn-default">搜索</button>
                     </form>
@@ -92,6 +92,7 @@
                         <button type="submit" class="btn btn-default">搜索</button>
                     </form>
                 </s:if>
+
             </s:if>
             <s:else>
                 <form class="navbar-form navbar-left"
@@ -102,6 +103,7 @@
                     <button type="submit" class="btn btn-default">搜索</button>
                 </form>
             </s:else>
+
             <ul class="nav navbar-nav navbar-right">
 
                 <s:if test="#session.existUser == null">

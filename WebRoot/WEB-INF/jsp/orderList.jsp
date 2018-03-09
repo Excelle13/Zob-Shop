@@ -5,6 +5,8 @@
 <!-- saved from url=(0043)http://localhost:8080/mango/cart/list.jhtml -->
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+    <link rel="icon" href="${pageContext.request.contextPath}/image/icon.png" type="image/png"/>
+
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 
     <title>订单页面</title>

@@ -86,7 +86,7 @@
 
 
     <div class="chart-div">
-        <h3 style="text-align: center">在线用户数量</h3>
+        <h3 style="text-align: center">季度销量</h3>
         <canvas id="myChart1"></canvas>
     </div>
     <div class="chart-div">
@@ -94,7 +94,7 @@
         <canvas id="myChart2"></canvas>
     </div>
     <div class="chart-div">
-        <h3 style="text-align: center">库存低于10件的商品</h3>
+        <h3 style="text-align: center">销量最高/用户最爱</h3>
         <canvas id="myChart3"></canvas>
     </div>
     <div class="chart-div">
@@ -108,10 +108,10 @@
     var myChart = new Chart(ctx, {
         type: 'line',
         data: {
-            labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+            labels: ["17春季", "17夏季", "17秋季", "17冬季", "18春季", "18夏季"],
             datasets: [{
-                label: '# of Votes',
-                data: [12, 19, 3, 5, 2, 3],
+                label: '季度销量',
+                data: [10, 15, 3, 5, 11, 20],
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)',
                     'rgba(54, 162, 235, 0.2)',
@@ -146,10 +146,10 @@
     var myChart = new Chart(ctx, {
         type: 'bar',
         data: {
-            labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+            labels: ["男装", "女装", "手机", "电脑", "户外用品", "珠宝饰品"],
             datasets: [{
-                label: '# of Votes',
-                data: [12, 19, 3, 5, 2, 3],
+                label: '商品数量',
+                data: [16, 50, 5,5, 20, 30],
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)',
                     'rgba(54, 162, 235, 0.2)',
@@ -184,7 +184,7 @@
     var myChart = new Chart(ctx, {
         type: 'pie',
         data: {
-            labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+            labels: ["韩版女装", "精选男装", "女靴", "Green", "Purple", "Orange"],
             datasets: [{
                 label: '# of Votes',
                 data: [12, 19, 3, 5, 2, 3],

@@ -7,6 +7,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <title>ZOB商城会员登录</title>
+    <link rel="icon" href="${pageContext.request.contextPath}/image/icon.png" type="image/png"/>
 
     <link href="${pageContext.request.contextPath}/css/common.css" rel="stylesheet" type="text/css"/>
     <link href="${pageContext.request.contextPath}/css/login.css" rel="stylesheet" type="text/css"/>

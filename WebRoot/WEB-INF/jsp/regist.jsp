@@ -8,6 +8,7 @@
     <title>会员注册</title>
     <link href="${pageContext.request.contextPath}/css/common.css" rel="stylesheet" type="text/css"/>
     <link href="${pageContext.request.contextPath}/css/register.css" rel="stylesheet" type="text/css"/>
+    <link rel="icon" href="${pageContext.request.contextPath}/image/icon.png" type="image/png"/>
 
     <script>
         function checkForm() {

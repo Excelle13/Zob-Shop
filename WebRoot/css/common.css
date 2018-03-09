@@ -251,6 +251,7 @@ div.container1 .span24 {
 	width: 950px;
 	/*height: 36px;*/
 	margin-right: 0px;
+	border-radius:3px;
 }
 
 div.container1 .prepend1 {

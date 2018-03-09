@@ -14,12 +14,17 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/bootstrap-3.3.7/css/bootstrap.min.css">
     <script language="javascript" src="${pageContext.request.contextPath}/js/jquery-3.3.1.min.js"></script>
     <script language="javascript" src="${pageContext.request.contextPath}/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <link href="${pageContext.request.contextPath}/swiper/css/swiper.min.css" rel="stylesheet" type="text/css"/>
+
+    <link rel="icon" href="${pageContext.request.contextPath}/image/icon.png" type="image/png"/>
 
     <script type="text/javascript" src="${pageContext.request.contextPath}/cart/js/jquery-1.7.min.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/cart/js/common.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/cart/js/quick_links.js"></script>
+    <script language="javascript" src="${pageContext.request.contextPath}/swiper/js/swiper.min.js"></script>
 
 </head>
+
 <body>
 <%@ include file="menu.jsp" %>
 <%--<nav class="navbar navbar-fixed-top  navbar-inverse " style="z-index: 100011">
@@ -218,14 +223,16 @@
             <s:iterator var="c" value="#session.cList">
                 <dl style="margin-top: 4px">
                     <dt style="border-bottom: 2px solid #bac7b9;padding-bottom:5px;margin-bottom: 8px">
-                        <a style="padding: 2px 0;text-decoration: none" href="${pageContext.request.contextPath}/product_findByCid.action?cid=<s:property value="#c.cid"/>&page=1"><s:property
+                        <a style="padding: 2px 0;text-decoration: none"
+                           href="${pageContext.request.contextPath}/product_findByCid.action?cid=<s:property value="#c.cid"/>&page=1"><s:property
                                 value="#c.cname"/></a>
                     </dt>
 
                     <s:iterator var="cs" value="#c.categorySeconds">
 
                         <dd style="background:#f3f6ff;margin:2px 1px;border-radius: 2px">
-                            <a style="padding: 2px 5px;text-decoration: none" href="${ pageContext.request.contextPath }/product_findByCsid.action?csid=<s:property value="#cs.csid"/>&page=1"><s:property
+                            <a style="padding: 2px 5px;text-decoration: none"
+                               href="${ pageContext.request.contextPath }/product_findByCsid.action?csid=<s:property value="#cs.csid"/>&page=1"><s:property
                                     value="#cs.csname"/></a>
                         </dd>
 
@@ -237,6 +244,9 @@
     </div>
     <div class="span18 last">
 
+        <div style="background: #009688;border-radius: 3px ;padding: 2px;margin-top: 7px;margin-bottom: 7px">
+            <h3 style="font-size: 21px; padding: 5px;color: white;margin-left: 10px">商品</h3>
+        </div>
         <form id="productForm" action="${pageContext.request.contextPath}/image/蔬菜 - Powered By Mango Team.htm"
               method="get">
 
@@ -316,8 +326,259 @@
                 </s:if>
             </div>
         </form>
+
+
     </div>
+
+
+    <%--    <div class="swiper-container" style="width: 74%;">
+            <div style="background: #f44336;border-radius: 3px ;padding: 2px;margin-top: 7px;margin-bottom: 7px">
+                <h3 style="font-size: 21px; padding: 5px;color: white;margin-left: 10px">热门推荐</h3>
+            </div>
+            <div class="swiper-wrapper">
+                <s:iterator var="p" value="pageBean.list">
+                    <div class="swiper-slide">
+                        <a href="${ pageContext.request.contextPath }/product_findByPid.action?pid=<s:property value="#p.pid"/>">
+                            <img src="${pageContext.request.contextPath}/<s:property value="#p.image"/>" width="100"
+                                 height="100" style="display: inline-block;"></a>
+                    </div>
+                </s:iterator>
+
+            </div>
+        </div>--%>
+
+
+    <s:if test="#session.existUser.name=='hezhaobo' || #session.existUser.name=='杨幂'|| #session.existUser.name=='刘恺威' ">
+
+
+        <s:if test="#session.existUser.name=='hezhaobo'">
+            <div class="swiper-container" style="width: 74%;">
+                <div style="background: #f44336;border-radius: 3px ;padding: 2px;margin-top: 7px;margin-bottom: 7px">
+                    <h3 style="font-size: 21px; padding: 5px;color: white;margin-left: 10px">热门推荐</h3>
+                </div>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="${ pageContext.request.contextPath }/product_findByPid.action?pid=79">
+                            <img src="${pageContext.request.contextPath}/products/dn2.jpg" width="100"
+                                 height="100" style="display: inline-block;"></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="${ pageContext.request.contextPath }/product_findByPid.action?pid=83">
+                            <img src="${pageContext.request.contextPath}/products/alien.jpg" width="100"
+                                 height="100" style="display: inline-block;"></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="${ pageContext.request.contextPath }/product_findByPid.action?pid=82">
+                            <img src="${pageContext.request.contextPath}/products/note8.jpg" width="100"
+                                 height="100" style="display: inline-block;"></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="${ pageContext.request.contextPath }/product_findByPid.action?pid=75">
+                            <img src="${pageContext.request.contextPath}/products/1/duanxue3.png" width="100"
+                                 height="100" style="display: inline-block;"></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="${ pageContext.request.contextPath }/product_findByPid.action?pid=45">
+                            <img src="${pageContext.request.contextPath}/products/1/cs50004.png" width="100"
+                                 height="100" style="display: inline-block;"></a>
+                    </div>
+
+
+                    <div class="swiper-slide">
+                        <a href="${ pageContext.request.contextPath }/product_findByPid.action?pid=11">
+                            <img src="${pageContext.request.contextPath}/products/1/cs20001.jpg" width="100"
+                                 height="100" style="display: inline-block;"></a>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <a href="${ pageContext.request.contextPath }/product_findByPid.action?pid=12">
+                            <img src="${pageContext.request.contextPath}/products/1/cs20002.jpg" width="100"
+                                 height="100" style="display: inline-block;"></a>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <a href="${ pageContext.request.contextPath }/product_findByPid.action?pid=43">
+                            <img src="${pageContext.request.contextPath}/products/1/cs50002.png" width="100"
+                                 height="100" style="display: inline-block;"></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="${ pageContext.request.contextPath }/product_findByPid.action?pid=44">
+                            <img src="${pageContext.request.contextPath}/products/1/cs50003.png" width="100"
+                                 height="100" style="display: inline-block;"></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="${ pageContext.request.contextPath }/product_findByPid.action?pid=76">
+                            <img src="${pageContext.request.contextPath}/products/1/duanxue4.png" width="100"
+                                 height="100" style="display: inline-block;"></a>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <a href="${ pageContext.request.contextPath }/product_findByPid.action?pid=46">
+                            <img src="${pageContext.request.contextPath}/products/1/cs50005.png" width="100"
+                                 height="100" style="display: inline-block;"></a>
+                    </div>
+
+
+                </div>
+            </div>
+
+
+        </s:if>
+        <s:if test="#session.existUser.name=='杨幂'">
+            <div class="swiper-container" style="width: 74%;">
+                <div style="background: #f44336;border-radius: 3px ;padding: 2px;margin-top: 7px;margin-bottom: 7px">
+                    <h3 style="font-size: 21px; padding: 5px;color: white;margin-left: 10px">热门推荐</h3>
+                </div>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="${ pageContext.request.contextPath }/product_findByPid.action?pid=72">
+                            <img src="${pageContext.request.contextPath}/products/1/nvxie.jpg" width="100"
+                                 height="100" style="display: inline-block;"></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="${ pageContext.request.contextPath }/product_findByPid.action?pid=74">
+                            <img src="${pageContext.request.contextPath}/products/1/duanxue2.png" width="100"
+                                 height="100" style="display: inline-block;"></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="${ pageContext.request.contextPath }/product_findByPid.action?pid=75">
+                            <img src="${pageContext.request.contextPath}/products/1/duanxue3.png" width="100"
+                                 height="100" style="display: inline-block;"></a>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <a href="${ pageContext.request.contextPath }/product_findByPid.action?pid=76">
+                            <img src="${pageContext.request.contextPath}/products/1/duanxue4.png" width="100"
+                                 height="100" style="display: inline-block;"></a>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <a href="${ pageContext.request.contextPath }/product_findByPid.action?pid=11">
+                            <img src="${pageContext.request.contextPath}/products/1/cs20001.jpg" width="100"
+                                 height="100" style="display: inline-block;"></a>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <a href="${ pageContext.request.contextPath }/product_findByPid.action?pid=12">
+                            <img src="${pageContext.request.contextPath}/products/1/cs20002.jpg" width="100"
+                                 height="100" style="display: inline-block;"></a>
+                    </div>
+
+
+                    <div class="swiper-slide">
+                        <a href="${ pageContext.request.contextPath }/product_findByPid.action?pid=13">
+                            <img src="${pageContext.request.contextPath}/products/1/cs20003.jpg" width="100"
+                                 height="100" style="display: inline-block;"></a>
+                    </div>
+
+
+                    <div class="swiper-slide">
+                        <a href="${ pageContext.request.contextPath }/product_findByPid.action?pid=14">
+                            <img src="${pageContext.request.contextPath}/products/1/cs20004.jpg" width="100"
+                                 height="100" style="display: inline-block;"></a>
+                    </div>
+
+
+                </div>
+            </div>
+        </s:if>
+        <s:if test="#session.existUser.name=='刘恺威'">
+            <div class="swiper-container" style="width: 74%;">
+                <div style="background: #f44336;border-radius: 3px ;padding: 2px;margin-top: 7px;margin-bottom: 7px">
+                    <h3 style="font-size: 21px; padding: 5px;color: white;margin-left: 10px">热门推荐</h3>
+                </div>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="${ pageContext.request.contextPath }/product_findByPid.action?pid=42">
+                            <img src="${pageContext.request.contextPath}/products/1/cs50001.png" width="100"
+                                 height="100" style="display: inline-block;"></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="${ pageContext.request.contextPath }/product_findByPid.action?pid=43">
+                            <img src="${pageContext.request.contextPath}/products/1/cs50002.png" width="100"
+                                 height="100" style="display: inline-block;"></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="${ pageContext.request.contextPath }/product_findByPid.action?pid=44">
+                            <img src="${pageContext.request.contextPath}/products/1/cs50003.png" width="100"
+                                 height="100" style="display: inline-block;"></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="${ pageContext.request.contextPath }/product_findByPid.action?pid=45">
+                            <img src="${pageContext.request.contextPath}/products/1/cs50004.png" width="100"
+                                 height="100" style="display: inline-block;"></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="${ pageContext.request.contextPath }/product_findByPid.action?pid=46">
+                            <img src="${pageContext.request.contextPath}/products/1/cs50005.png" width="100"
+                                 height="100" style="display: inline-block;"></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="${ pageContext.request.contextPath }/product_findByPid.action?pid=47">
+                            <img src="${pageContext.request.contextPath}/products/1/cs50006.png" width="100"
+                                 height="100" style="display: inline-block;"></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="${ pageContext.request.contextPath }/product_findByPid.action?pid=48">
+                            <img src="${pageContext.request.contextPath}/products/1/cs50007.png" width="100"
+                                 height="100" style="display: inline-block;"></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="${ pageContext.request.contextPath }/product_findByPid.action?pid=49">
+                            <img src="${pageContext.request.contextPath}/products/1/cs50008.png" width="100"
+                                 height="100" style="display: inline-block;"></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="${ pageContext.request.contextPath }/product_findByPid.action?pid=50">
+                            <img src="${pageContext.request.contextPath}/products/1/cs50009.png" width="100"
+                                 height="100" style="display: inline-block;"></a>
+                    </div>
+
+                </div>
+            </div>
+        </s:if>
+
+    </s:if>
+    <s:else>
+
+        <div class="swiper-container" style="width: 74%;">
+            <div style="background: #f44336;border-radius: 3px ;padding: 2px;margin-top: 7px;margin-bottom: 7px">
+                <h3 style="font-size: 21px; padding: 5px;color: white;margin-left: 10px">热门推荐</h3>
+            </div>
+            <div class="swiper-wrapper">
+                <s:iterator var="p" value="pageBean.list">
+                    <div class="swiper-slide">
+                        <a href="${ pageContext.request.contextPath }/product_findByPid.action?pid=<s:property value="#p.pid"/>">
+                            <img src="${pageContext.request.contextPath}/<s:property value="#p.image"/>" width="100"
+                                 height="100" style="display: inline-block;"></a>
+                    </div>
+                </s:iterator>
+
+            </div>
+        </div>
+    </s:else>
+
+
+    <script>
+        var mySwiper = new Swiper('.swiper-container', {
+            autoplay: {
+                delay: 3000,//1秒切换一次
+            },
+            centeredSlides: true,
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+            slidesPerView: 5,
+            slidesPerGroup: 3,
+            spaceBetween: 50,
+
+
+            freeMode: true
+        })
+    </script>
 </div>
+
+
 <div class="container1 footer">
     <div class="span24">
         <div class="footerAd">
@@ -401,7 +662,8 @@
                     </li>
                     <li>
                         <a href="#" class="history_list"><i class="view"></i></a>
-                        <div class="mp_tooltip" style=" visibility:hidden;">我的资产<i class="icon_arrow_right_black"></i>
+                        <div class="mp_tooltip" style=" visibility:hidden;">我的资产<i
+                                class="icon_arrow_right_black"></i>
                         </div>
                     </li>
                     <li>
@@ -424,8 +686,10 @@
                     </li>
                     <li>
                         <a href="#none"><i class="mpbtn_qrcode"></i></a>
-                        <div class="mp_qrcode" style="display:none;"><img src="images/weixin_code_145.png" width="148"
-                                                                          height="175"/><i class="icon_arrow_white"></i>
+                        <div class="mp_qrcode" style="display:none;"><img src="images/weixin_code_145.png"
+                                                                          width="148"
+                                                                          height="175"/><i
+                                class="icon_arrow_white"></i>
                         </div>
                     </li>
                     <li><a href="#top" class="return_top"><i class="top"></i></a></li>
@@ -486,5 +750,6 @@
         }
     </script>
 </div>
+
 </body>
 </html>

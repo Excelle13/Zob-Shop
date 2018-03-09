@@ -10,6 +10,7 @@
 
     <link href="${pageContext.request.contextPath}/css/common.css" rel="stylesheet" type="text/css"/>
     <link href="${pageContext.request.contextPath}/css/cart.css" rel="stylesheet" type="text/css"/>
+    <link rel="icon" href="${pageContext.request.contextPath}/image/icon.png" type="image/png"/>
 
 
 </head>
@@ -34,18 +35,30 @@
 </div>--%>
 <%@ include file="menu.jsp" %>
 <div class="container1 cart">
+<div class="step step1" style="padding-top: 10px;padding-bottom: 50px">
+    <ul>
+
+        <%--<li class="current"></li>
+        <li>我的订单</li>--%>
+        <blockquote class="layui-elem-quote">
+            购物车信息
+        </blockquote>
+    </ul>
+</div>
+</div>
+<div class="container1 cart">
     <s:if test="#session.cart.cartItems.size() != 0">
         <div class="span24">
-            <div class="step step1" style="padding-top: 10px;padding-bottom: 50px">
-                <ul>
+            <%--<div class="step step1" style="padding-top: 10px;padding-bottom: 50px">--%>
+                <%--<ul>
 
-                        <%--<li class="current"></li>
-                        <li>我的订单</li>--%>
+                        &lt;%&ndash;<li class="current"></li>
+                        <li>我的订单</li>&ndash;%&gt;
                     <blockquote class="layui-elem-quote">
                         购物车信息
                     </blockquote>
-                </ul>
-            </div>
+                </ul>--%>
+            <%--</div>--%>
             <table>
                 <tbody>
                 <tr>
@@ -102,7 +115,7 @@
     <s:else>
         <img src="${ pageContext.request.contextPath }/image/addcart.png" alt="">
         <div class="span24">
-            <div class="step step1">
+            <div class="step step1" style="margin: 0 auto">
                 <img src="${ pageContext.request.contextPath }/image/addcart.png" alt="">
                 <span><h2>亲!您还没有购物!请先去购物!</h2></span>
             </div>
